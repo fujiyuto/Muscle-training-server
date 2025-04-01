@@ -1,0 +1,1 @@
+ALTER TABLE training_menus ADD category VARCHAR(1) NOT NULL COMMENT 'カテゴリー';

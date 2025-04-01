@@ -1,0 +1,1 @@
+ALTER TABLE body_part_groups ADD unique_code VARCHAR(20) UNIQUE NOT NULL COMMENT 'ユニークコード';

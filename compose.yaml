@@ -1,0 +1,18 @@
+services:
+  muscle-traning-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_DATABASE}
+      - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=com.mysql.cj.jdbc.Driver
+    ports:
+      - '${APP_PORT:-81}:8080'
+    networks:
+      - default_network
+
+networks:
+  default_network:
+    external: true
