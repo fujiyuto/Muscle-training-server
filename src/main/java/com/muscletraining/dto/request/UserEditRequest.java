@@ -5,9 +5,6 @@ import java.time.LocalDate;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.muscletraining.validation.PasswordMatches.PasswordMatches;
-
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -17,36 +14,14 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
-@PasswordMatches(fieldName = "password", checkFieldName = "passwordConfirm")
-public class UserCreateRequest {
-
+public class UserEditRequest {
+    
     /**
      * ユーザー名
      */
     @NotBlank
     @Size(min = 1, max = 50)
     private String userName;
-
-    /**
-     * メールアドレス
-     */
-    @NotBlank
-    @Email
-    private String email;
-
-    /**
-     * パスワード
-     */
-    @NotBlank
-    @Size(min = 8, max = 64)
-    private String password;
-
-    /**
-     * パスワード（確認用）
-     */
-    @NotBlank
-    @Size(min = 8, max = 64)
-    private String passwordConfirm;
 
     /**
      * 姓
@@ -97,4 +72,5 @@ public class UserCreateRequest {
     @Past
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthday;
+
 }
