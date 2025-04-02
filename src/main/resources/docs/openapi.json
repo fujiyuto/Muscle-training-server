@@ -91,6 +91,7 @@
     "/users/{user_id}/password": {
         "get": {
             "operationId": "sendEditUserPasswordMailRequest",
+            "summary": "パスワード変更メール送信",
             "tags": [ "User" ],
             "security": [
                 {
@@ -106,6 +107,7 @@
         },
         "patch": {
             "operationId": "editUserPassword",
+            "summary": "パスワード変更",
             "tags": [ "User" ],
             "security": [
                 {
@@ -126,6 +128,7 @@
     "/users/{user_id}/email": {
         "get": {
             "operationId": "editUserEmail",
+            "summary": "メールアドレス更新リクエスト",
             "tags": [ "User" ],
             "parameters": [
                 {"$ref": "#/components/parameters/EmailEditTokenQuery"}
@@ -139,6 +142,7 @@
         },
         "post": {
             "operationId": "sendEditUserEmailMailRequest",
+            "summary": "メールアドレス更新",
             "tags": [ "User" ],
             "security": [
                 {
