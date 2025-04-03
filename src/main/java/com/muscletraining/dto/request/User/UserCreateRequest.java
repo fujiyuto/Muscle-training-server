@@ -1,4 +1,4 @@
-package com.muscletraining.dto.request;
+package com.muscletraining.dto.request.User;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

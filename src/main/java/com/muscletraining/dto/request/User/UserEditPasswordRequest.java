@@ -1,4 +1,4 @@
-package com.muscletraining.dto.request;
+package com.muscletraining.dto.request.User;
 
 import com.muscletraining.validation.PasswordMatches.PasswordMatches;
 
